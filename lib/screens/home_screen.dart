@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/material.dart';
 import 'package:dalle/services/ai_handler.dart';
 import 'package:dalle/widgets/description_field.dart';
 import 'package:dalle/widgets/image_download_button.dart';
@@ -26,15 +25,14 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    aiHandler.generateImage('iphone 14');
     return Scaffold(
       appBar: AppBar(
         title: const Text('Image Generator'),
         actions: [
-          // ImageDownloadButton(
-          //   imageUrl: _imageUrl,
-          //   isGenerating: _isGenerating,
-          // ),
+          ImageDownloadButton(
+            imageUrl: _imageUrl,
+            isGenerating: _isGenerating,
+          ),
         ],
       ),
       body: Padding(
@@ -42,16 +40,16 @@ class _HomeScreenState extends State<HomeScreen> {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              // ImageContainer(
-              //   isGenerating: _isGenerating,
-              //   imageUrl: _imageUrl,
-              //   displayMessage: _displayMessage,
-              // ),
+              ImageContainer(
+                isGenerating: _isGenerating,
+                imageUrl: _imageUrl,
+                displayMessage: _displayMessage,
+              ),
               const SizedBox(height: 14),
-              // DescriptionField(
-              //   isGenerating: _isGenerating,
-              //   onSubmitted: generateImage,
-              // ),
+              DescriptionField(
+                isGenerating: _isGenerating,
+                onSubmitted: generateImage,
+              ),
             ],
           ),
         ),
