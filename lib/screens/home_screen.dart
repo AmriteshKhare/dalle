@@ -15,7 +15,7 @@ class _HomeScreenState extends State<HomeScreen> {
   final aiHandler = AIHandler();
   String? _imageUrl;
   bool _isGenerating = false;
-  String _displayMessage = 'Input a description to generate an image';
+  String _displayMessage = 'ENTER KEYWORDS TO GENERATE';
 
   @override
   void dispose() {
@@ -27,7 +27,9 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Image Generator'),
+        title: const Text('GPT 4'),
+        centerTitle: true,
+        backgroundColor: Colors.black,
         actions: [
           ImageDownloadButton(
             imageUrl: _imageUrl,

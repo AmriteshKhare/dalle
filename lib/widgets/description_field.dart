@@ -32,17 +32,18 @@ class _DescriptionFieldState extends State<DescriptionField> {
       focusNode: _focusNode,
       decoration: InputDecoration(
         border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(30),
+          borderRadius: BorderRadius.circular(3),
         ),
         focusedBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(30),
+          borderRadius: BorderRadius.circular(3),
           borderSide: const BorderSide(
-            color: Colors.white,
+            color: Colors.black,
           ),
         ),
-        hintText: 'Input a description',
+        hintText: 'HERE',
         suffixIcon: IconButton(
           splashRadius: 20,
+          color: Color.fromRGBO(0, 0, 0, 1),
           onPressed: widget._isGenerating
               ? null
               : () {
